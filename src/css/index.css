@@ -79,7 +79,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 9px; }
 
 .light {
-  color: #FFFFFFCC; }
+  color: rgba(255, 255, 255, 0.8); }
 
 strong, b {
   font-weight: bold; }
@@ -1211,7 +1211,7 @@ input {
   color: rgba(0, 0, 0, 0.87);
   transition: color 0.1s ease 0s; }
   .checkbox label.light, .checkbox + label.light {
-    color: #FFFFFFCC; }
+    color: rgba(255, 255, 255, 0.8);  }
 
 .checkbox .box, .checkbox label {
   cursor: auto;
