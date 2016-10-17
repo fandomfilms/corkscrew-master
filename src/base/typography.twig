@@ -1,0 +1,87 @@
+{% extends function == 'json' ? '_corkscrew-api.twig' : '_corkscrew-section.twig' %}
+
+{% set label = 'Typography' %}
+{% set description = 'Typography can be placed on either a dark or light background which effects the color of the typography being used.
+</p>
+<br />
+<p>
+The default is type on a light background and can be adjusted for the dark background by adding the class <span style="color:#649dc5;font-weight:600;">.light</span> to any text or label element.' %}
+
+{% block block_content %}
+<div class="row">
+  <div class="col-xs-12">
+    <div style="padding:12px;">
+    <h1>Level 1 heading</h1>
+
+    <h2>Level 2 heading</h2>
+
+    <h3>Level 3 heading</h3>
+
+    <h4>Level 4 heading</h4>
+
+    <h5>Level 5 heading</h5>
+
+    <h6>Level 6 heading</h6>
+  </div>
+  <br /><br />
+  <div style="background-color:#3b4549;padding:12px;">
+    <h1 class="light">Level 1 heading</h1>
+
+    <h2 class="light">Level 2 heading</h2>
+
+    <h3 class="light">Level 3 heading</h3>
+
+    <h4 class="light">Level 4 heading</h4>
+
+    <h5 class="light">Level 5 heading</h5>
+
+    <h6 class="light">Level 6 heading</h6>
+    </div>
+  </div>
+</div>
+
+<div class="seperator" style="clear:both;"></div>
+      <p>
+      In addition to H tags you can also modify the base font size by using x-large, large, small or x-small classes as needed.
+      </p>
+      <div class="row">
+        <div class="col-xs-12">
+          <div style="padding:12px;">
+            <div style="padding:12px;">
+            <p class="x-large">
+              X-large
+            </p>
+            <p class="large">
+              large
+            </p>
+            <p>
+              Default
+            </p>
+            <p class="small">
+              Small
+            </p>
+            <p class="x-small">
+              X-Small
+            </p>
+          </div>
+          </div>
+          <div style="background-color:#3b4549;padding:12px;">
+          <p class="x-large light">
+              X-large
+            </p>
+            <p class="large light">
+              large
+            </p>
+            <p class="light">
+              Default
+            </p>
+            <p class="small light">
+              Small
+            </p>
+            <p class="x-small light">
+              X-Small
+            </p>
+          </div>
+
+
+{% endblock %}

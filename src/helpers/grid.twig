@@ -1,0 +1,35 @@
+{% extends function == 'json' ? '_corkscrew-api.twig' : '_corkscrew-section.twig' %}
+
+{% set label = 'Grid' %}
+{% set description = '
+  <p>
+    We have decided to go with <a target="_blank" href="http://flexboxgrid.com">Flexboxgrid</a> as our grid system. Please take a look at their docs to understand how to use the grid system.
+  </p>
+' %}
+
+{% block block_content %}
+
+  <div class="row">
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <div style="background-color: #31708f; border-bottom: solid 1px #ffffff;">&nbsp;</div>
+      </div>
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <div style="background-color: #31708f; border-bottom: solid 1px #ffffff;">&nbsp;</div>
+      </div>
+    </div>
+    <div class="seperator smaller"></div>
+    <div class="row">
+      <div class="col-md-4 col-sm-12 col-xs-12">
+        <div style="background-color: #31708f; border-bottom: solid 1px #ffffff;">&nbsp;</div>
+      </div>
+      <div class="col-md-4 col-sm-12 col-xs-12">
+        <div style="background-color: #31708f; border-bottom: solid 1px #ffffff;">&nbsp;</div>
+      </div>
+      <div class="col-md-4 col-sm-12 col-xs-12">
+        <div style="background-color: #31708f; border-bottom: solid 1px #ffffff;">&nbsp;</div>
+      </div>
+    </div>
+
+
+{% endblock %}
+

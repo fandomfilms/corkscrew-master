@@ -1,0 +1,35 @@
+{% extends function == 'json' ? '_corkscrew-api.twig' : '_corkscrew-section.twig' %}
+
+{% set label = 'Inputs' %}
+{% set description = '
+<p>Text inputs are accompanied by a label and wrapped inside a fieldset. The :hover and :focus styles follow our brand colors.</p>
+<br />
+<p>Search fields are NOT accompanied by a label</p>
+' %}
+
+{# INPUT CONTENT #}
+
+{% set placeHolderStandardContent = 'standard message' %}
+{% set placeHolderSearchContent = 'search' %}
+{% set buttonSecondaryContent = 'Secondary Button' %}
+{% set buttonInactiveContent = 'Inactive Button' %}
+
+{% set fieldlabelStandardContent = 'Standard Label' %}
+{% set fieldlabelSearchContent = 'Search Label' %}
+
+{% block block_content %}
+
+{# INPUT TYPES #}
+
+<p><span class="callout">Standard Inputs</span></p>
+<br />
+
+{% embed "/components/inputs/input-standard.twig" %}{% endembed %}
+
+<div class="seperator"></div>
+
+{% embed "/components/inputs/input-search.twig" %}{% endembed %}
+
+<div class="seperator"></div>
+
+{% endblock %}

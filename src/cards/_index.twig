@@ -1,0 +1,10 @@
+{% set section = 'cards' %}
+{% extends "_corkscrew-layout.twig" %}
+
+{% block sectionName %}Cards{% endblock %}
+
+{% block content %}
+
+  {% embed "cards/cards.twig" %}{% endembed %}
+
+{% endblock content %}

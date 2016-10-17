@@ -1,0 +1,38 @@
+{% extends function == 'json' ? '_corkscrew-api.twig' : '_corkscrew-section.twig' %}
+
+{% set label = 'Messages' %}
+{% set description = '
+<p>Messsages are used to provide action-based feedback messages or to convey informational and/or critical account-related messages.</p>
+<br />
+<p>Feedback messages are categorized into four types based on severity:</p>
+<br />
+<p>
+    <span class="callout">Standard:</span> just provides information to the user not related to a performed interaction. Use the standard class for the light gray background color.
+    <br /><br />
+    <span class="callout">Notice:</span> just provides information related to a performed action. Use the notice class for the blue background color.
+    <br /><br />
+    <span class="callout">Success:</span> indicates that an action processed successfully or that there are no account-related issues. The success helper class gives this block its green color.
+    <br /><br />
+    <span class="callout">Warning:</span> indicates that an action failed at this time that otherwise would be processed correctly. If the message is related to an account status then campaign sending ability might be affected to some extent. Use the warning class for the yellow background color.
+    <br /><br />
+    <span class="callout">Alert:</span> indicates that an action failed completely. If the message is related to an account status then the campaigns will definitley not send. Use the alert class for the red background color.
+</p>
+' %}
+
+{# MESSAGECONTENT #}
+
+{% set messageStandardContent = 'Standard Message' %}
+{% set messageNoticeContent = 'Notice Message' %}
+{% set messageSuccessContent = 'Success Message' %}
+{% set messageWarningContent = 'Warning Message' %}
+{% set messageAlertContent = 'Alert Message' %}
+
+{% block block_content %}
+
+{% embed "/messages/messages/message-standard.twig" %}{% endembed %}
+{% embed "/messages/messages/message-notice.twig" %}{% endembed %}
+{% embed "/messages/messages/message-success.twig" %}{% endembed %}
+{% embed "/messages/messages/message-warning.twig" %}{% endembed %}
+{% embed "/messages/messages/message-alert.twig" %}{% endembed %}
+
+{% endblock %}

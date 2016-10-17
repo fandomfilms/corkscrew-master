@@ -1,0 +1,11 @@
+{% set section = 'components' %}
+{% extends "_corkscrew-layout.twig" %}
+
+{% block content %}
+
+  {% embed "components/buttons.twig" %}{% endembed %}
+  {% embed "components/facets.twig" %}{% endembed %}
+  {% embed "components/inputs.twig" %}{% endembed %}
+  {% embed "components/checkboxes.twig" %}{% endembed %}
+
+{% endblock content %}

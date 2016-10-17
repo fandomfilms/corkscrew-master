@@ -1,0 +1,18 @@
+{% extends function == 'json' ? '_corkscrew-api.twig' : '_corkscrew-section.twig' %}
+
+{% set label = 'Checkboxes' %}
+{% set description = '<p>Checkboxes can be used as a set or individually based on needs.  Labels are not required for facets (as they are replaced by section headers).  Headers are only required when checkboxes are used in a form or as described in wireframes.</p>
+<br />
+<p>The default type on a light background can be adjusted for the dark background by adding the class <span style="color:#649dc5;font-weight:600;">.light</span> to any text or label element.</p>' %}
+
+{# CHECKBOX CONTENT #}
+
+{% set fieldlabelStandardContent = 'Standard Label' %}
+
+{% block block_content %}
+
+{% embed "/components/inputs/checkbox-standard.twig" %}{% endembed %}
+
+
+{% endblock %}
+

@@ -1,0 +1,40 @@
+{% extends function == 'json' ? '_corkscrew-api.twig' : '_corkscrew-section.twig' %}
+
+{% set label = 'Cards' %}
+{% set description = '
+<p>Cards are used to apply a container around a related grouping of information similar to playing card.</p>
+' %}
+
+{# BUTTON CONTENT #}
+
+{% set cardTopLeftContent = 'B0042X9LCO' %}
+{% set cardTopRightContent = '10' %}
+{% set cardTopRightSecondaryContent = '99+' %}
+{% set cardMainContent = 'D7000 Digital SLR Camera & 18-105mm VR DX AF-S sdcsd ssff ssdfs ssfsf D7000 Digital SLR Camera & 18-105mm VR DX AF-S brian rocks' %}
+{% set cardBottomLeftContent = 'Brand' %}
+{% set cardBottomRightContent = 'fa  fa-expand' %}
+
+{% block block_content %}
+
+{# BUTTON TYPES #}
+
+<p><span class="callout">Regular Cards</span></p>
+<br />
+
+<p>Cards in a single column row of the flex grid will create the following behavior.</p>
+<br />
+
+<div class="row">
+    <div class="col-xs-12">
+      <div class="cards">
+        {% embed "/cards/cards/card-standard.twig" %}{% endembed %}
+        {% embed "/cards/cards/card-standard.twig" %}{% endembed %}
+        {% embed "/cards/cards/card-standard.twig" %}{% endembed %}
+      </div>
+    </div>
+</div>
+
+<div class="seperator"></div>
+
+
+{% endblock %}

@@ -1,0 +1,97 @@
+.card {
+    -moz-box-direction: normal;
+    -moz-box-orient: vertical;
+    background: $white none repeat scroll 0 0;
+    border: medium none;
+    border-radius: 0.285714rem;
+    box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;//300px;
+    min-height: 0;
+    padding: 0;
+    position: relative;
+    transition: box-shadow 0.1s ease 0s, transform 0.1s ease 0s, -webkit-transform 0.1s ease 0s;
+    width: 240px;
+    flex-grow: 1;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.card::after, .cards::after {
+    clear: both;
+    content: " ";
+    display: block;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.card:last-child {
+    margin-bottom: 0;
+}
+
+.cards > .card {
+    display: flex;
+    float: none;
+    margin: 0.875em 0.5em;
+}
+
+.image {
+    background-color: transparent;
+    display: inline-block;
+    max-width: 100%;
+    position: relative;
+    vertical-align: middle;
+}
+
+//top right corner of card
+
+.card [class*="right floated"], .cards > .card [class*="right floated"] {
+    float: right;
+
+    &:last-child {
+
+        .value {
+            margin-right: 0px;
+            padding-right: 10px;
+
+            &.highlight {
+                background-color: $primary;
+                color: $white;
+            }
+        }
+
+   }
+}
+
+.card .value {
+    padding: 12px 0 12px 12px;
+    text-align: center;
+
+    &.divider {
+        border-left: 1px solid #cccccc;
+    }
+
+    &.left {
+        text-align: left;
+        border: none;
+    }
+
+    &.main {
+        //font-weight: 600;
+        border: none;
+        text-align: left;
+        padding-bottom: 6px;
+        @include multiLineEllipsis($lineHeight: 1.6em, $lineCount: 3);
+
+    }
+
+}
+
+
+

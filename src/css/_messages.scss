@@ -1,0 +1,36 @@
+.message {
+  background: #f8f8f9 none repeat scroll 0 0;
+  border-radius: 0.285714rem;
+  box-shadow: 0 0 0 1px rgba(34, 36, 38, 0.22) inset, 0 0 0 0 transparent;
+  color: rgb(255, 255, 255);
+  line-height: 1.4285em;
+  margin: 1em 0;
+  min-height: 1em;
+  padding: 1em 1.5em;
+  position: relative;
+  transition: opacity 0.1s ease 0s, color 0.1s ease 0s, background 0.1s ease 0s, box-shadow 0.1s ease 0s;
+
+  // Adding flush will get rid of rounded corners and
+  &.flush {
+    margin: 0px;
+    border-radius: 0px;
+  }
+
+  // Setting background color based upon type
+  &.standard {
+    background-color: $background-color;
+    color: $font-color;
+  }
+  &.success {
+    background-color: $success-color;
+  }
+  &.warning {
+    background-color: $warning-color;
+  }
+  &.alert {
+    background-color: $alert-color;
+  }
+  &.notice {
+    background-color: $notice-color;
+  }
+}

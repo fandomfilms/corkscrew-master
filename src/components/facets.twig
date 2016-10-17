@@ -1,0 +1,37 @@
+{% extends function == 'json' ? '_corkscrew-api.twig' : '_corkscrew-section.twig' %}
+
+{% set label = 'Tags' %}
+{% set description = '
+<p>Facets are values applied as a filter and appear as UI Tags within the system.</p>
+<br />
+<p>Each tag contains a title within it, the title should reflect the category that the value came from.</p>
+<br />
+<p>Inactive tags are tags which have been selected, applied as a filter and then toggled to inactive by the user.  Inactive tags function the same as removing a tag without removing it from the series.</p>
+' %}
+
+{# FACET CONTENT #}
+
+{% set tagFacetContent = 'Facet Value' %}
+{% set tagDataQualityContent = 'Data Quality' %}
+{% set tagInactiveContent = 'Inactive Value' %}
+
+{% block block_content %}
+
+
+{# FACET LABELED ICONS #}
+
+<p><span class="callout">Standard Tags</span></p>
+<br />
+
+{% embed "/components/inputs/standard-tag.twig" %}{% endembed %}
+
+<div class="seperator"></div>
+
+<p><span class="callout">Standard Tag Series</span></p>
+<br />
+
+{% embed "/components/inputs/standard-tag-series.twig" %}{% endembed %}
+
+<div class="seperator"></div>
+
+{% endblock %}

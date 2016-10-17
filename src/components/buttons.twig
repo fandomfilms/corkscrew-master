@@ -1,0 +1,79 @@
+{% extends function == 'json' ? '_corkscrew-api.twig' : '_corkscrew-section.twig' %}
+
+{% set label = 'Buttons' %}
+{% set description = '
+<p>Buttons are categorized by action type (standard, primary, and primary variants (secondary)).
+A frameless button has been added to allow buttons to appear as standard text or icons.</p>
+<br />
+<p>Regular buttons contain a font size of 13px. Additional button sizes are controlled by the font size used within them. Buttons outside of the regular size are reserved for call out events.</p>
+<br />
+<p>You can create buttons using the button HTML tag accompanied by the button class.</p>
+' %}
+
+{# BUTTON CONTENT #}
+
+{% set buttonStandardContent = 'Standard Button' %}
+{% set buttonPrimaryContent = 'Primary Button' %}
+{% set buttonSecondaryContent = 'Secondary Button' %}
+{% set buttonInactiveContent = 'Inactive Button' %}
+{% set buttonFramelessContent = 'Frameless Button' %}
+
+{% block block_content %}
+
+{# BUTTON TYPES #}
+
+<p><span class="callout">Regular Buttons</span></p>
+<br />
+
+{% embed "/components/buttons/button-standard.twig" %}{% endembed %}
+{% embed "/components/buttons/button-primary.twig" %}{% endembed %}
+{% embed "/components/buttons/button-secondary.twig" %}{% endembed %}
+{% embed "/components/buttons/button-inactive.twig" %}{% endembed %}
+{% embed "/components/buttons/button-frameless.twig" %}{% endembed %}
+
+<div class="seperator"></div>
+
+{# BUTTON ICONS #}
+
+<p><span class="callout">Icon Buttons</span></p>
+<br />
+
+{% embed "/components/buttons/button-icon.twig" %}{% endembed %}
+
+<div class="seperator"></div>
+
+{# BUTTON LABELED ICONS #}
+
+<p><span class="callout">Labeled Icon Buttons</span></p>
+<br />
+
+{% embed "/components/buttons/button-labeled-icon.twig" %}{% endembed %}
+
+<div class="seperator"></div>
+
+{# BUTTON LOADING #}
+
+<p><span class="callout">Loading Buttons</span></p>
+<br />
+
+{% embed "/components/buttons/button-loading.twig" %}{% endembed %}
+
+<div class="seperator"></div>
+
+{# BUTTON SIZE #}
+
+<p><span class="callout">Button Sizes</span></p>
+<br />
+
+{% embed "/components/buttons/button-sizes.twig" %}{% endembed %}
+
+<div class="seperator"></div>
+
+{# BUTTON GROUPS #}
+
+<p><span class="callout">Button Groups</span></p>
+<br />
+
+{% embed "/components/buttons/button-groups.twig" %}{% endembed %}
+
+{% endblock %}

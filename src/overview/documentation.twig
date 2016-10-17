@@ -1,0 +1,24 @@
+{# Disable the HTML Viewer for this section #}
+
+{% set project =
+  {
+    htmlViewer: false
+  }
+%}
+
+{% extends function == 'json' ? '_corkscrew-api.twig' : '_corkscrew-section.twig' %}
+
+{% set label = 'Documentation' %}
+{% set description = 'Beyond the style guide, we have provided the following additional sources of documentation to further explain our deliverables, as well as links to 3rd party resources.' %}
+
+{% block block_content %}
+
+<ul>
+  <li>
+    <a href="#!">
+      Document Title
+    </a>
+  </li>
+</ul>
+
+{% endblock %}
