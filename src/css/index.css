@@ -35,63 +35,6 @@ body {
   font-size: 13px;
   line-height: 1.4; }
 
-body {
-  line-height: 1; }
-
-* {
-  font: inherit; }
-
-h1 {
-  font-size: 36px; }
-
-h2 {
-  font-size: 30px; }
-
-h3 {
-  font-size: 24px; }
-
-h4 {
-  font-size: 18px; }
-
-h5 {
-  font-size: 14px; }
-
-h6 {
-  font-size: 12px; }
-
-h1, h2, h3, h4, h5, h6 {
-  color: inherit;
-  font-family: inherit;
-  font-weight: 500;
-  line-height: 1.1; }
-
-.x-large {
-  font-size: 20px; }
-
-.large {
-  font-size: 15px; }
-
-.small {
-  font-size: 11px; }
-
-.x-small {
-  font-size: 9px; }
-
-.light {
-  color: rgba(255, 255, 255, 0.8); }
-
-body {
-  color: #3b4549;
-  font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-size: 13px;
-  line-height: 1.4; }
-
-body {
-  line-height: 1; }
-
-* {
-  font: inherit; }
-
 h1 {
   font-size: 36px; }
 

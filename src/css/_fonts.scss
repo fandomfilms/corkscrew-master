@@ -1,16 +1,8 @@
 body {
-    color: #3b4549;
+    color: $font-color;
     font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 13px;
     line-height: 1.4;
-}
-
-body {
-    line-height: 1;
-}
-
-* {
-    font: inherit;
 }
 
 h1 {
