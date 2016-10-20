@@ -1344,7 +1344,10 @@ input {
       margin: 0 10px 0 10px; }
       .dx-modal .modal-content .modal-header .close {
         float: right;
-        cursor: pointer; }
+        cursor: pointer;
+        color: #cccccc; }
+        .dx-modal .modal-content .modal-header .close:hover {
+          color: #649dc5; }
     .dx-modal .modal-content .modal-body {
       padding: 10px; }
     .dx-modal .modal-content .modal-footer {
