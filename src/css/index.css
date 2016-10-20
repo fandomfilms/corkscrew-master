@@ -1340,7 +1340,7 @@ input {
     .dx-modal .modal-content .modal-header {
       font-weight: 700;
       border-bottom: solid 1px #DCDEE2;
-      padding: 10px 0 10px 0;
+      padding: 12px 6px 12px 6px;
       margin: 0 10px 0 10px; }
       .dx-modal .modal-content .modal-header .close {
         float: right;
@@ -1349,7 +1349,7 @@ input {
         .dx-modal .modal-content .modal-header .close:hover {
           color: #649dc5; }
     .dx-modal .modal-content .modal-body {
-      padding: 10px; }
+      padding: 10px 18px; }
     .dx-modal .modal-content .modal-footer {
       border-top: solid 1px #DCDEE2;
       padding: 10px;

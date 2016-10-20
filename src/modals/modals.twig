@@ -6,8 +6,11 @@
 ' %}
 
 {# MODAL CONTENT #}
-
 {% set buttonPrimaryContent = 'Open Modal' %}
+
+{% set placeHolderStandardContent = 'standard message' %}
+{% set fieldlabelStandardContent = 'Standard Label' %}
+
 {% set cardTopLeftContent = 'B0042X9LCO' %}
 {% set cardTopRightContent = '10' %}
 {% set cardTopRightSecondaryContent = '99+' %}
@@ -61,8 +64,7 @@ This type of dialog should be used sparingly and not shown more than once. They 
       </div>
       <div class="modal-body">
         <p>Here is some text</p>
-        <p>Here is some more text</p>
-        <p>Here is some more more text</p>
+        <p>{% embed "/components/inputs/input-standard.twig" %}{% endembed %}</p>
       </div>
       <div class="modal-footer">
         <div class="btn btn-standard model-close">Cancel</div>
