@@ -1,0 +1,82 @@
+{% extends function == 'json' ? '_corkscrew-api.twig' : '_corkscrew-section.twig' %}
+
+{% set label = 'Cards' %}
+{% set description = '
+<p>Modals are used to display content in a layer above the app. This paradigm is used in cases such as the creation or editing of a record, as well as various types of messaging and wizards.</p>
+' %}
+
+{# MODAL CONTENT #}
+
+{% set buttonPrimaryContent = 'Open Modal' %}
+{% set cardTopLeftContent = 'B0042X9LCO' %}
+{% set cardTopRightContent = '10' %}
+{% set cardTopRightSecondaryContent = '99+' %}
+{% set cardMainContent = 'D7000 Digital SLR Camera & 18-105mm VR DX AF-S sdcsd ssff ssdfs ssfsf D7000 Digital SLR Camera & 18-105mm VR DX AF-S brian rocks' %}
+{% set cardBottomLeftContent = 'Brand' %}
+{% set cardBottomRightContent = 'fa  fa-expand' %}
+
+{% block block_content %}
+
+{# MODAL TYPES #}
+
+<p><span class="callout">Regular Modal</span></p>
+
+<p>
+We use modals and dialogs for a variety of different purposes throughout the app including forms and verification prompts.</p>
+<br />
+
+<div class="row">
+  <div class="col-xs-12">
+    <div class="btn btn-primary dx-modal-btn" data-dx-modal="modal1">
+      {{ buttonPrimaryContent }}
+    </div>
+  </div>
+</div>
+
+<div class="seperator"></div>
+
+<p><span class="callout">Feature Modal</span></p>
+
+<p>
+Use the feature-dialog class to show a dialog with a simpler look and feel.
+</p>
+<p>
+This type of dialog should be used sparingly and not shown more than once. They should be easily dismissible as they don't feature a close icon.
+</p>
+<br />
+
+<div class="row">
+  <div class="col-xs-12">
+    <div class="btn btn-primary dx-modal-btn" data-dx-modal="modal2">
+      {{ buttonPrimaryContent }}
+    </div>
+  </div>
+</div>
+
+<div id="modal1" class="dx-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        Title
+        <div class="close model-close"><i class="fa fa-times-circle"></i></div>
+      </div>
+      <div class="modal-body">
+        <p>Here is some text</p>
+        <p>Here is some more text</p>
+        <p>Here is some more more text</p>
+      </div>
+      <div class="modal-footer">
+        <div class="btn btn-standard model-close">Cancel</div>
+        <div class="btn btn-primary model-close">Apply</div>
+      </div>
+    </div>
+</div>
+<div id="modal2" class="dx-modal">
+  <div class="modal-content">
+    <div class="modal-body">Just the body</div>
+  </div>
+</div>
+
+
+
+
+{% endblock %}

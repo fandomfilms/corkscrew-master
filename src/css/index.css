@@ -44,7 +44,7 @@ h2 {
 h3 {
   font-size: 24px; }
 
-h4 {
+h4, .dx-modal .modal-content .modal-header {
   font-size: 18px; }
 
 h5 {
@@ -53,7 +53,7 @@ h5 {
 h6 {
   font-size: 12px; }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, .dx-modal .modal-content .modal-header, h5, h6 {
   color: inherit;
   font-family: inherit;
   font-weight: 500;
@@ -111,7 +111,7 @@ a {
 .btn {
   -moz-user-select: none;
   background: #f1f1f1 none repeat scroll 0 0;
-  border: medium none;
+  border: 1px solid #cccccc;
   border-radius: 0.285714rem;
   box-shadow: 0 0 0 1px transparent inset, 0 0 0 0 rgba(34, 36, 38, 0.15) inset;
   color: #3b4549;
@@ -142,20 +142,23 @@ a {
     background-color: #bebebe; }
   .btn.btn-primary {
     color: #ffffff;
-    background-color: #649dc5; }
+    background-color: #649dc5;
+    border: 1px solid #649dc5; }
     .btn.btn-primary:hover {
       background-color: #4385b3; }
     .btn.btn-primary:active {
       background-color: #35698e; }
   .btn.btn-secondary {
     color: #ffffff;
-    background-color: #376a8e; }
+    background-color: #376a8e;
+    border: 1px solid #376a8e; }
     .btn.btn-secondary:hover {
       background-color: #294f69; }
     .btn.btn-secondary:active {
       background-color: #1b3344; }
   .btn.btn-inactive {
-    color: #cccccc; }
+    color: #cccccc;
+    border: 1px solid #cccccc; }
     .btn.btn-inactive:hover {
       background-color: #f1f1f1; }
   .btn.btn-frameless {
@@ -1299,5 +1302,58 @@ input {
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis; }
+
+.dx-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6); }
+  .dx-modal.animate-in {
+    display: block;
+    animation-name: fadeIn;
+    animation-duration: .3s;
+    animation-fill-mode: both; }
+    .dx-modal.animate-in .modal-content {
+      animation-name: zoomIn;
+      animation-duration: .3s;
+      animation-fill-mode: both; }
+  .dx-modal.animate-out {
+    display: block;
+    animation-name: fadeOut;
+    animation-duration: .3s;
+    animation-fill-mode: both; }
+    .dx-modal.animate-out .modal-content {
+      animation-name: zoomOut;
+      animation-duration: .6s;
+      animation-fill-mode: both; }
+  .dx-modal .modal-content {
+    background: #ffffff;
+    margin: 15% auto;
+    border: 10px solid rgba(0, 0, 0, 0.8);
+    width: 80%;
+    border-radius: 4px; }
+    .dx-modal .modal-content .modal-header {
+      font-weight: 700;
+      border-bottom: solid 1px #DCDEE2;
+      padding: 10px 0 10px 0;
+      margin: 0 10px 0 10px; }
+      .dx-modal .modal-content .modal-header .close {
+        float: right;
+        cursor: pointer; }
+    .dx-modal .modal-content .modal-body {
+      padding: 10px; }
+    .dx-modal .modal-content .modal-footer {
+      border-top: solid 1px #DCDEE2;
+      padding: 10px;
+      margin: 0;
+      background-color: #f1f1f1;
+      text-align: right; }
+      .dx-modal .modal-content .modal-footer .btn {
+        display: inline-block; }
 
 /*# sourceMappingURL=index.css.map */

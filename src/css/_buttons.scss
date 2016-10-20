@@ -1,7 +1,7 @@
 .btn {
   -moz-user-select: none;
   background: $background-color none repeat scroll 0 0;
-  border: medium none;
+  border: 1px solid $font-inactive;
   border-radius: 0.285714rem;
   box-shadow: 0 0 0 1px transparent inset, 0 0 0 0 rgba(34, 36, 38, 0.15) inset;
   color: $font-color;
@@ -41,6 +41,7 @@
   &.btn-primary {
     color: $white;
     background-color: $primary;
+    border: 1px solid $primary;
     &:hover {
       background-color: darken($primary, 10%);
     }
@@ -52,6 +53,7 @@
   &.btn-secondary {
     color: $white;
     background-color: $secondary;
+    border: 1px solid $secondary;
     &:hover {
       background-color: darken($secondary, 10%);
     }
@@ -61,7 +63,8 @@
   }
 
   &.btn-inactive {
-    color: #cccccc;
+    color: $font-inactive;
+    border: 1px solid $font-inactive;
     &:hover {
       background-color: $background-color;
     }

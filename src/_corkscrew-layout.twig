@@ -6,7 +6,7 @@
     repositoryUrl: 'https://github.com/fandomfilms/corkscrew-master',
     css: ['/src/css/index.css', '/src/assets/fonts/font-awesome/css/font-awesome.min.css', '/src/assets/animate/animate.min.css'],
     headJS: ['', ''],
-    footJS: ['', ''],
+    footJS: ['/src/js/modals/modals.js', ''],
     htmlViewer: true
   }
 
@@ -95,6 +95,7 @@
   <link rel="prefetch" href="{{ path_for('navigation', { 'name': 'components' }) }}">
   <link rel="prefetch" href="{{ path_for('navigation', { 'name': 'messages' }) }}">
   <link rel="prefetch" href="{{ path_for('navigation', { 'name': 'cards' }) }}">
+  <link rel="prefetch" href="{{ path_for('navigation', { 'name': 'modals' }) }}">
   <link rel="prefetch" href="{{ path_for('navigation', { 'name': 'modules' }) }}">
   <link rel="prefetch" href="{{ path_for('navigation', { 'name': 'helpers' }) }}">
   <link rel="prefetch" href="{{ path_for('navigation', { 'name': 'templates' }) }}">
@@ -182,6 +183,7 @@
           <li class="{% if section == "components" %}is-active{% endif %}"><a href="{{ path_for('navigation', { 'name': 'components' }) }}">Form Elements</a></li>
           <li class="{% if section == "messages" %}is-active{% endif %}"><a href="{{ path_for('navigation', { 'name': 'messages' }) }}">Messages</a></li>
           <li class="{% if section == "cards" %}is-active{% endif %}"><a href="{{ path_for('navigation', { 'name': 'cards' }) }}">Cards</a></li>
+          <li class="{% if section == "modals" %}is-active{% endif %}"><a href="{{ path_for('navigation', { 'name': 'modals' }) }}">Modals</a></li>
           <li class="{% if section == "modules" %}is-active{% endif %}"><a href="{{ path_for('navigation', { 'name': 'modules' }) }}">Modules</a></li>
           <li class="{% if section == "templates" %}is-active{% endif %}"><a href="{{ path_for('navigation', { 'name': 'templates' }) }}">Templates</a>
             <ul id="cs-templates" class="cs-site-nav-menu">
