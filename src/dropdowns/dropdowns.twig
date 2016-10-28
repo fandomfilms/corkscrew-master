@@ -1,0 +1,31 @@
+{% extends function == 'json' ? '_corkscrew-api.twig' : '_corkscrew-section.twig' %}
+
+{% set label = 'Dropdowns' %}
+{% set description = '
+<p>
+  The dropdown menu styles are applied through 2 main classes: "dropdown-trigger" and "dropdown-content". The trigger class needs to be applied to the parent element of the content class. This is because the dropdown content is positioned relative to the position of the button.
+</p>
+<p>
+  For the items in the dropdown menu, apply the "menu-item" class to get the hover states and borders as shown below.
+</p>
+' %}
+
+{# DROPDOWNS CONTENT #}
+
+{% set placeHolderSearchContent = 'search' %}
+{% set buttonPrimaryContent = 'Primary Button' %}
+{% set buttonSecondaryContent = 'Secondary Button' %}
+{% set buttonInactiveContent = 'Inactive Button' %}
+{% set buttonFramelessContent = 'Frameless Button' %}
+
+{% block block_content %}
+
+{# DROPDOWN TYPES #}
+
+<p><span class="callout">Search Menu</span></p>
+
+{% embed "/dropdowns/dropdowns/search-menu.twig" %}{% endembed %}
+
+<div class="seperator"></div>
+
+{% endblock %}

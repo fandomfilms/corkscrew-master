@@ -6,7 +6,7 @@
     repositoryUrl: 'https://github.com/fandomfilms/corkscrew-master',
     css: ['/src/css/index.css', '/src/assets/fonts/font-awesome/css/font-awesome.min.css', '/src/assets/animate/animate.min.css'],
     headJS: ['', ''],
-    footJS: ['/src/js/modals/modals.js', ''],
+    footJS: ['/src/js/modals/modals.js', '/src/js/dropdowns/dropdowns.js'],
     htmlViewer: true
   }
 
@@ -93,6 +93,7 @@
   <link rel="prefetch" href="{{ path_for('navigation', { 'name': 'overview' }) }}">
   <link rel="prefetch" href="{{ path_for('navigation', { 'name': 'base' }) }}">
   <link rel="prefetch" href="{{ path_for('navigation', { 'name': 'components' }) }}">
+  <link rel="prefetch" href="{{ path_for('navigation', { 'name': 'dropdowns' }) }}">
   <link rel="prefetch" href="{{ path_for('navigation', { 'name': 'messages' }) }}">
   <link rel="prefetch" href="{{ path_for('navigation', { 'name': 'cards' }) }}">
   <link rel="prefetch" href="{{ path_for('navigation', { 'name': 'modals' }) }}">
@@ -181,6 +182,7 @@
           <li class="{% if section == "helpers" %}is-active{% endif %}"><a href="{{ path_for('navigation', { 'name': 'helpers' }) }}">Grid System</a></li>
           <li class="{% if section == "base" %}is-active{% endif %}"><a href="{{ path_for('navigation', { 'name': 'base' }) }}">Typography</a></li>
           <li class="{% if section == "components" %}is-active{% endif %}"><a href="{{ path_for('navigation', { 'name': 'components' }) }}">Form Elements</a></li>
+          <li class="{% if section == "dropdowns" %}is-active{% endif %}"><a href="{{ path_for('navigation', { 'name': 'dropdowns' }) }}">Dropdowns</a></li>
           <li class="{% if section == "messages" %}is-active{% endif %}"><a href="{{ path_for('navigation', { 'name': 'messages' }) }}">Messages</a></li>
           <li class="{% if section == "cards" %}is-active{% endif %}"><a href="{{ path_for('navigation', { 'name': 'cards' }) }}">Cards</a></li>
           <li class="{% if section == "modals" %}is-active{% endif %}"><a href="{{ path_for('navigation', { 'name': 'modals' }) }}">Modals</a></li>
