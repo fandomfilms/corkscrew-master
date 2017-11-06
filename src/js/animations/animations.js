@@ -145,8 +145,6 @@ document.addEventListener("mouseover", function(event){
         onComplete:onComplete
       });
 
-      //test
-
       //TweenMax.set(btnAction, {backgroundColor:'#' + Math.floor(Math.random() * 16777215).toString(16)});
       //This randomly changes color
 
